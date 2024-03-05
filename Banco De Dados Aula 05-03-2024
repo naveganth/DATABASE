@@ -1,0 +1,23 @@
+/* Lógico_1: */
+
+CREATE TABLE Jogadores (
+    idjogador INTEGER PRIMARY KEY,
+    nomejogador VARCHAR (40),
+    fk_Equipe_idequipe INTEGER
+);
+
+CREATE TABLE Equipe (
+    id_equipe INTEGER PRIMARY KEY,
+    nome VARCHAR (40)
+);
+ 
+ALTER TABLE Jogadores ADD CONSTRAINT FK_Jogadores_2
+    FOREIGN KEY (fk_Equipe_idequipe)
+    REFERENCES Equipe (id_equipe)
+    ON DELETE RESTRICT;
+
+    SHOW TABLES
+
+    DESC equipe
+    
+    
