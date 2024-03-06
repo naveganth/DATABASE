@@ -17,7 +17,21 @@ ALTER TABLE Jogadores ADD CONSTRAINT FK_Jogadores_2
     ON DELETE RESTRICT;
 
     SHOW TABLES
+    
 
-    DESC equipe
-    
-    
+    DESCRIBE Jogadores
+
+;
+INSERT INTO equipe VALUES (3, 'CORINTHIAS');
+INSERT INTO equipe VALUES (4, 'GABRIELIS');
+INSERT INTO equipe VALUES (5, 'FLUMINENSE')
+
+SELECT * FROM equipe
+
+DESCRIBE jogadores
+
+INSERT INTO jogadores VALUES (1 ,'ARRASCABEÇA', 1)
+
+SELECT * FROM jogadores
+
+SELECT * FROM jogadores LEFT JOIN equipe ON `fk_Equipe_idequipe` = id_equipe
